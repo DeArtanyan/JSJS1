@@ -12,12 +12,22 @@
         <div class="product-image">
             <img :src="image" />
         </div>
-        <div class="product-info">
-            <h1>{{ product }}</h1>
+            <div class="product-info">
+                <h1>{{product}}</h1>
                 <p v-if="inStock">In Stock</p>
                 <p v-else>Out of Stock</p>
-            <span v-if="onSale">On Sale!</span>
-        </div>
+        
+                <ul>
+                    <li v-for="detail in details">{{detail}}</li>
+                </ul>
+                <ul>
+                    <li v-for="size in sizes">{{size}}</li>
+                </ul>
+
+                <div v-for="variant in variants" :key="variant.variantId">
+                    <p>{{variant.variantColor}}</p>
+                </div>
+            </div>  
     </div>
 </div>
 </body>
