@@ -3,9 +3,9 @@ let app = new Vue({
     data: {
     product: 'Socks',
     image: "./assets/vmSocks-green-onWhite.jpg",
-    inStock: true,
+    inStock: false,
     details: ['80% cotton', '20% polyester', 'Gender-neutral'],
-    
+
     variants: [
         {
         variantId: 2234,
@@ -20,6 +20,7 @@ let app = new Vue({
     ],
       cart: 0
     },
+
     methods: {
         addToCart() {
             this.cart += 1
@@ -30,5 +31,4 @@ let app = new Vue({
         removeFromCart() {
             this.cart -= 1
         }
-    }
-})
+}})
